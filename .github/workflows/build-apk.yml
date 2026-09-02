@@ -15,7 +15,10 @@ jobs:
           channel: 'stable'
       - name: Build APK
         run: |
-          cd *giri*ekran* 2>/dev/null || cd *giriş-ekranı* 2>/dev/null || cd konvoy-takip* || cd *
+          # Bulut bilgisayarı klasörün adını otomatik bulup içine girer
+          DIR_NAME=$(find . -maxdepth 1 -type d ! -name ".*" | head -n 1)
+          echo "Proje klasörü bulundu: $DIR_NAME"
+          cd "$DIR_NAME"
           flutter pub get
           flutter build apk --release
       - name: Upload APK
