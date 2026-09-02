@@ -1,0 +1,6 @@
+{
+  "name": "Konvoy Takip - Flutter Giriş Ekranı",
+  "description": "Flutter ve Dart ile modern konvoy takip uygulaması giriş ekranı, tam ekran canlı GPS haritası, 4 haneli oda kodu doğrulama ve mobil simülatör.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
