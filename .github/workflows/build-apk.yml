@@ -13,12 +13,13 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-      - run: |
-          cd konvoy-takip---flutter-giriş-ekranı
+      - name: Build APK
+        run: |
+          cd *giri*ekran* 2>/dev/null || cd *giriş-ekranı* 2>/dev/null || cd konvoy-takip* || cd *
           flutter pub get
           flutter build apk --release
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: konvoy-app-release-apk
-          path: konvoy-takip---flutter-giriş-ekranı/build/app/outputs/flutter-apk/app-release.apk
+          path: "**/build/app/outputs/flutter-apk/app-release.apk"
